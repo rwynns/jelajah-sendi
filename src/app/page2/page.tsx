@@ -19,7 +19,7 @@ export default function Page2() {
         <ButtonBack />
         <Speaker />
 
-        <Text fontSize="6xl" fontWeight={"bold"} textAlign="center" pt={20}>
+        <Text fontSize="6xl" fontWeight={"900"} textAlign="center" pt={20}>
           KENALAN DENGAN SENDI
         </Text>
 
