@@ -28,7 +28,7 @@ export default function Puzzle() {
         <Text fontSize="6xl" fontWeight={"900"} textAlign="center" pt={20}>
           STRUKTUR ANATOMI
         </Text>
-        <Text fontSize="5xl" fontWeight={"500"} textAlign="center" mb={16}>
+        <Text fontSize="4xl" fontWeight={"500"} textAlign="center" mb={10}>
           {title.split("-").join(" ").toUpperCase()}
         </Text>
 
@@ -54,10 +54,10 @@ export default function Puzzle() {
             boxShadow={"2xl"}
           >
             <Image
-              src={"/ekstremitas_atas.png"}
+              src={`/puzzles/${title}.png`}
               alt={"sendi"}
-              width={"22rem"}
-              height={"27rem"}
+              width={"18rem"}
+              height={"23rem"}
               opacity={0.5}
             />
           </Box>

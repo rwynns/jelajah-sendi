@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Text, Image } from "@chakra-ui/react";
 import { ButtonBack } from "@/components/ButtonBack";
 import Speaker from "@/components/Speaker";
+import Link from "next/link";
 
 export default function Page3() {
   return (
@@ -22,65 +23,71 @@ export default function Page3() {
         </Text>
 
         <Flex justifyContent={"center"} mt={10} gap={16}>
-          <Box
-            cursor={"pointer"}
-            _hover={{ transform: "scale(1.1)" }}
-            transition={"transform 0.3s"}
-            bg={"white"}
-            borderRadius={"3xl"}
-            boxShadow={"2xl"}
-          >
-            <Image
-              src={"/ekstremitas_atas.png"}
-              alt={"sendi"}
-              width={"18rem"}
-              height={"21rem"}
-            />
+          <Link href="/puzzle/shoulder-joint">
+            <Box
+              cursor={"pointer"}
+              _hover={{ transform: "scale(1.1)" }}
+              transition={"transform 0.3s"}
+              bg={"white"}
+              borderRadius={"3xl"}
+              boxShadow={"2xl"}
+            >
+              <Image
+                src={"/ekstremitas_atas.png"}
+                alt={"sendi"}
+                width={"18rem"}
+                height={"21rem"}
+              />
 
-            <Text fontSize="2xl" textAlign="center" fontWeight={"500"} pb={5}>
-              Eksremitas Atas
-            </Text>
-          </Box>
+              <Text fontSize="2xl" textAlign="center" fontWeight={"500"} pb={5}>
+                Shoulder Joint
+              </Text>
+            </Box>
+          </Link>
 
-          <Box
-            cursor={"pointer"}
-            _hover={{ transform: "scale(1.1)" }}
-            transition={"transform 0.3s"}
-            bg={"white"}
-            borderRadius={"3xl"}
-            boxShadow={"2xl"}
-          >
-            <Image
-              src={"/ekstremitas_atas.png"}
-              alt={"sendi"}
-              width={"18rem"}
-              height={"21rem"}
-            />
+          <Link href="/puzzle/elbow-joint">
+            <Box
+              cursor={"pointer"}
+              _hover={{ transform: "scale(1.1)" }}
+              transition={"transform 0.3s"}
+              bg={"white"}
+              borderRadius={"3xl"}
+              boxShadow={"2xl"}
+            >
+              <Image
+                src={"/elbow_joint.png"}
+                alt={"sendi"}
+                width={"18rem"}
+                height={"21rem"}
+              />
 
-            <Text fontSize="2xl" textAlign="center" fontWeight={"500"} pb={5}>
-              Eksremitas Atas
-            </Text>
-          </Box>
+              <Text fontSize="2xl" textAlign="center" fontWeight={"500"} pb={5}>
+                Elbow Joint
+              </Text>
+            </Box>
+          </Link>
 
-          <Box
-            cursor={"pointer"}
-            _hover={{ transform: "scale(1.1)" }}
-            transition={"transform 0.3s"}
-            bg={"white"}
-            borderRadius={"3xl"}
-            boxShadow={"2xl"}
-          >
-            <Image
-              src={"/ekstremitas_atas.png"}
-              alt={"sendi"}
-              width={"18rem"}
-              height={"21rem"}
-            />
+          <Link href="/puzzle/wrist-joint">
+            <Box
+              cursor={"pointer"}
+              _hover={{ transform: "scale(1.1)" }}
+              transition={"transform 0.3s"}
+              bg={"white"}
+              borderRadius={"3xl"}
+              boxShadow={"2xl"}
+            >
+              <Image
+                src={"/wrist_joint.png"}
+                alt={"sendi"}
+                width={"18rem"}
+                height={"21rem"}
+              />
 
-            <Text fontSize="2xl" textAlign="center" fontWeight={"500"} pb={5}>
-              Eksremitas Atas
-            </Text>
-          </Box>
+              <Text fontSize="2xl" textAlign="center" fontWeight={"500"} pb={5}>
+                Wrist Joint
+              </Text>
+            </Box>
+          </Link>
         </Flex>
       </Box>
     </>
