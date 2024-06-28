@@ -32,7 +32,13 @@ export default function Puzzle() {
           {title.split("-").join(" ").toUpperCase()}
         </Text>
 
-        <Flex justifyContent="center" alignItems="center" w={"auto"} gap={20}>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          w={"auto"}
+          gap={20}
+          direction={{ sm: "column", md: "row", lg: "row" }}
+        >
           <JigsawPuzzle
             imageSrc={`/puzzles/${title}.png`}
             rows={3}
@@ -40,14 +46,36 @@ export default function Puzzle() {
             onSolved={() => alert("Congratulations!")}
           />
 
-          <Image
-            src={`/puzzles/${title}.png`}
-            width={"19rem"}
-            height={"23rem"}
-            alt="ex"
-            opacity={0.5}
-          />
+          <Box
+            cursor={"pointer"}
+            transition={"transform 0.3s"}
+            bg={"white"}
+            borderRadius={"3xl"}
+            boxShadow={"2xl"}
+          >
+            <Image
+              src={"/ekstremitas_atas.png"}
+              alt={"sendi"}
+              width={"22rem"}
+              height={"27rem"}
+              opacity={0.5}
+            />
+          </Box>
         </Flex>
+
+        {/* Bottom right corner button */}
+        <Box pos={"absolute"} bottom={"1rem"} right={"1rem"} p={4} zIndex={1}>
+          <Image
+            src={"/images/next.png"}
+            alt="home"
+            w={"70"}
+            h={"70"}
+            cursor={"pointer"}
+            onClick={() => (window.location.href = "/")}
+            _hover={{ transform: "scale(1.1)" }}
+            transition={"transform 0.3s"}
+          />
+        </Box>
       </Box>
     </>
   );
