@@ -6,6 +6,7 @@ import Speaker from "@/components/Speaker";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Puzzle() {
 	const query = usePathname();
@@ -65,18 +66,19 @@ export default function Puzzle() {
         </Flex>
 
         {/* Bottom right corner button */}
-        <Box pos={"absolute"} bottom={"1rem"} right={"1rem"} p={4} zIndex={1}>
-          <Image
-            src={"/images/next.png"}
-            alt="home"
-            w={"70"}
-            h={"70"}
-            cursor={"pointer"}
-            onClick={() => (window.location.href = "/")}
-            _hover={{ transform: "scale(1.1)" }}
-            transition={"transform 0.3s"}
-          />
-        </Box>
+        <Link href="/gif/shoulder-joint">
+          <Box pos={"absolute"} bottom={"1rem"} right={"1rem"} p={4} zIndex={1}>
+            <Image
+              src={"/images/next.png"}
+              alt="home"
+              w={"70"}
+              h={"70"}
+              cursor={"pointer"}
+              _hover={{ transform: "scale(1.1)" }}
+              transition={"transform 0.3s"}
+            />
+          </Box>
+        </Link>
       </Box>
     </>
   );
