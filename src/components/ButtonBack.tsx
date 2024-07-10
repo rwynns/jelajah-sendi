@@ -1,7 +1,6 @@
 "use client"
 
-import Image from "next/image";
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 
 export const ButtonBack = () => {
@@ -13,9 +12,9 @@ export const ButtonBack = () => {
       position={"absolute"}
       top={5}
       left={5}
-			cursor={"pointer"}
+      cursor={"pointer"}
     >
-      <Image src={"/back.png"} alt={"back"} width={"80"} height={"80"} />
+      <Image src={"/back.png"} alt={"back"} width={"70px"} height={"70px"} />
     </Box>
   );
 }

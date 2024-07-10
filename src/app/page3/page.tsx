@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { ButtonBack } from "@/components/ButtonBack";
 import Speaker from "@/components/Speaker";
 import Link from "next/link";
@@ -10,7 +10,6 @@ export default function Page3() {
         bgImage={"/bg3.png"}
         h={"100vh"}
         bgPosition={"center"}
-        bgRepeat={"no-repeat"}
         alignItems={"center"}
         bgSize={"cover"}
         position={"relative"}
@@ -18,11 +17,17 @@ export default function Page3() {
         <ButtonBack />
         <Speaker />
 
-        <Text fontSize="6xl" fontWeight={"900"} textAlign="center" pt={20}>
+        <Text fontSize="6xl" fontWeight={"900"} textAlign="center" pt={20} mb={10}>
           EKSREMITAS ATAS
         </Text>
 
-        <Flex justifyContent={"center"} mt={10} gap={16}>
+        <Flex
+          justifyContent={"center"}
+          gap={16}
+          flexDirection={{ base: "column", md: "row", lg: "row" }}
+          w={"fit-content"}
+          m={"auto"}
+        >
           <Link href="/puzzle/shoulder-joint">
             <Box
               cursor={"pointer"}

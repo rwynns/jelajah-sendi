@@ -4,3 +4,9 @@
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .jigsaw-puzzle {
+    width: 50%;
+  }
+}

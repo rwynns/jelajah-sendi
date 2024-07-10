@@ -10,7 +10,6 @@ export default function Page4() {
         bgImage={"/bg4.png"}
         h={"100vh"}
         bgPosition={"center"}
-        bgRepeat={"no-repeat"}
         alignItems={"center"}
         bgSize={"cover"}
         position={"relative"}
@@ -18,11 +17,17 @@ export default function Page4() {
         <ButtonBack />
         <Speaker />
 
-        <Text fontSize="6xl" fontWeight={"900"} textAlign="center" pt={20}>
+        <Text fontSize="6xl" fontWeight={"900"} textAlign="center" pt={20} mb={10}>
           EKSREMITAS BAWAH
         </Text>
 
-        <Flex justifyContent={"center"} mt={10} gap={16}>
+        <Flex
+          justifyContent={"center"}
+          gap={16}
+          flexDirection={{ base: "column", md: "row", lg: "row" }}
+          w={"fit-content"}
+          m={"auto"}
+        >
           <Link href="/puzzle/hip-joint">
             <Box
               cursor={"pointer"}

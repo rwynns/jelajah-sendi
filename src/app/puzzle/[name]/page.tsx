@@ -15,7 +15,7 @@ export default function Puzzle() {
     <>
       <Box
         bgImage={"/bg4.png"}
-        h={"100vh"}
+        minH={"100vh"}
         bgPosition={"center"}
         bgRepeat={"no-repeat"}
         alignItems={"center"}
@@ -37,7 +37,8 @@ export default function Puzzle() {
           alignItems="center"
           w={"auto"}
           gap={20}
-          direction={{ sm: "column", md: "row", lg: "row" }}
+          direction={{ base: "column", md: "row", lg: "row" }}
+          pb={{ base: "9rem", md: 0, lg: 0 }}
         >
           <JigsawPuzzle
             imageSrc={`/puzzles/${title}.png`}
