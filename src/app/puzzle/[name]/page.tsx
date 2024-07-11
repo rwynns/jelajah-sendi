@@ -66,7 +66,7 @@ export default function Puzzle() {
         </Flex>
 
         {/* Bottom right corner button */}
-        <Link href="/gif/shoulder-joint">
+        <Link href={`/gif/${title}`}>
           <Box pos={"absolute"} bottom={"1rem"} right={"1rem"} p={4} zIndex={1}>
             <Image
               src={"/images/next.png"}
