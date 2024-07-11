@@ -48,9 +48,9 @@ export default function Shoulder() {
               src="hyperextension"
               title="Hyperextension"
             />
-            <GifCard alt="flexion" src="flexion" title="Flexion" />
-            <GifCard alt="flexion" src="flexion" title="Flexion" />
-            <GifCard alt="flexion" src="flexion" title="Flexion" />
+            <GifCard alt="abduction" src="abduction" title="Abduction" />
+            <GifCard alt="adduction" src="adduction" title="Adduction" />
+            <GifCard alt="circumduction" src="circumduction" title="Circumduction" />
             <GifCard
               alt="lateral_rotation"
               src="lateral_rotation"
@@ -71,7 +71,7 @@ export default function Shoulder() {
               src="horizontal_adduction"
               title="Horizontal Adduction"
             />
-            <GifCard alt="flexion" src="flexion" title="Flexion" />
+            <GifCard alt="scaption" src="scaption" title="Scaption" />
           </Grid>
         </Container>
       </Box>
