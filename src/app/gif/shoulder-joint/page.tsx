@@ -28,7 +28,7 @@ export default function Shoulder() {
             }}
             fontWeight={"900"}
             textAlign="center"
-            pt={10}
+            pt={14}
           >
             GERAK AKTIF SHOULDER
           </Text>
@@ -40,7 +40,7 @@ export default function Shoulder() {
               lg: "repeat(6, 1fr)",
             }}
             gap={6}
-            mt={5}
+            mt={7}
           >
             <GifCard
               folder="shoulder"
