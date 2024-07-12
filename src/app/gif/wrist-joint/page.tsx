@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import { Box, Text, Flex, Container } from "@chakra-ui/react";
 import { ButtonBack } from "@/components/ButtonBack";
 import Speaker from "@/components/Speaker";
 import { GifCard } from "@/components/GifCard";
 
-export default function Elbow() {
+export default function Wrist() {
   return (
     <>
       <Box
@@ -30,7 +30,7 @@ export default function Elbow() {
             textAlign="center"
             pt={5}
           >
-            GERAK AKTIF ELBOW
+            GERAK AKTIF WRIST
           </Text>
 
           <Flex
@@ -42,33 +42,41 @@ export default function Elbow() {
           >
             <GifCard
               alt="flexion"
-              folder="elbow"
+              folder="wrist"
               src="flexion"
               title="Flexion"
               width="13rem"
               height="16rem"
             />
             <GifCard
+              alt="neutral-position"
+              folder="wrist"
+              src="neutral-position"
+              title="Neutral Position"
+              width="13rem"
+              height="16rem"
+            />
+            <GifCard
+              folder="wrist"
               alt="extension"
-              folder="elbow"
               src="extension"
               title="Extension"
               width="13rem"
               height="16rem"
             />
             <GifCard
-              folder="elbow"
-              alt="pronation"
-              src="pronation"
-              title="Pronation"
+              folder="wrist"
+              alt="ulnar-deviation"
+              src="ulnar-deviation"
+              title="Ulnar Deviation"
               width="13rem"
               height="16rem"
             />
             <GifCard
-              folder="elbow"
-              alt="supination"
-              src="supination"
-              title="Supination"
+              folder="wrist"
+              alt="radial-deviation"
+              src="radial-deviation"
+              title="Radial Deviation"
               width="13rem"
               height="16rem"
             />

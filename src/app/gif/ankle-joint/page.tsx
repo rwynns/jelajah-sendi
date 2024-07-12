@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import { Box, Text, Flex, Container } from "@chakra-ui/react";
 import { ButtonBack } from "@/components/ButtonBack";
 import Speaker from "@/components/Speaker";
 import { GifCard } from "@/components/GifCard";
 
-export default function Elbow() {
+export default function Ankle() {
   return (
     <>
       <Box
@@ -30,7 +30,7 @@ export default function Elbow() {
             textAlign="center"
             pt={5}
           >
-            GERAK AKTIF ELBOW
+            GERAK AKTIF ANKLE
           </Text>
 
           <Flex
@@ -42,33 +42,41 @@ export default function Elbow() {
           >
             <GifCard
               alt="flexion"
-              folder="elbow"
-              src="flexion"
-              title="Flexion"
+              folder="ankle"
+              src="dorsiflexion"
+              title="Dorsiflexion"
               width="13rem"
               height="16rem"
             />
             <GifCard
-              alt="extension"
-              folder="elbow"
-              src="extension"
-              title="Extension"
+              alt="planar-flexion"
+              folder="ankle"
+              src="planar-flexion"
+              title="Planar Flexion"
               width="13rem"
               height="16rem"
             />
             <GifCard
-              folder="elbow"
-              alt="pronation"
-              src="pronation"
-              title="Pronation"
-              width="13rem"
-              height="16rem"
-            />
-            <GifCard
-              folder="elbow"
               alt="supination"
+              folder="ankle"
               src="supination"
-              title="Supination"
+              title="Supination (Inversion)"
+              width="13rem"
+              height="16rem"
+            />
+            <GifCard
+              alt="pronation"
+              folder="ankle"
+              src="pronation"
+              title="Pronation (Eversion)"
+              width="13rem"
+              height="16rem"
+            />
+            <GifCard
+              alt="abduction-adduction"
+              folder="ankle"
+              src="abduction-adduction"
+              title="Abduction & Adduction"
               width="13rem"
               height="16rem"
             />

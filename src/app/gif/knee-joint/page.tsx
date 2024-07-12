@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import { Box, Text, Flex, Container } from "@chakra-ui/react";
 import { ButtonBack } from "@/components/ButtonBack";
 import Speaker from "@/components/Speaker";
 import { GifCard } from "@/components/GifCard";
 
-export default function Elbow() {
+export default function Knee() {
   return (
     <>
       <Box
@@ -30,7 +30,7 @@ export default function Elbow() {
             textAlign="center"
             pt={5}
           >
-            GERAK AKTIF ELBOW
+            GERAK AKTIF KNEE
           </Text>
 
           <Flex
@@ -42,35 +42,19 @@ export default function Elbow() {
           >
             <GifCard
               alt="flexion"
-              folder="elbow"
+              folder="knee"
               src="flexion"
               title="Flexion"
-              width="13rem"
-              height="16rem"
+              width="14rem"
+              height="17rem"
             />
             <GifCard
               alt="extension"
-              folder="elbow"
+              folder="knee"
               src="extension"
               title="Extension"
-              width="13rem"
-              height="16rem"
-            />
-            <GifCard
-              folder="elbow"
-              alt="pronation"
-              src="pronation"
-              title="Pronation"
-              width="13rem"
-              height="16rem"
-            />
-            <GifCard
-              folder="elbow"
-              alt="supination"
-              src="supination"
-              title="Supination"
-              width="13rem"
-              height="16rem"
+              width="14rem"
+              height="17rem"
             />
           </Flex>
         </Container>

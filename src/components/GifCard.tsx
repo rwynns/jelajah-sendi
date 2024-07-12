@@ -3,12 +3,15 @@
 import { Box, Text, Image } from "@chakra-ui/react";
 
 interface GifCardProps {
+  folder: string;
 	src: string;
 	alt: string;
 	title: string;
+  width?: string;
+  height?: string;
 }
 
-export const GifCard = ({ src, alt, title }: GifCardProps) => {
+export const GifCard = ({ folder, src, alt, title, width, height }: GifCardProps) => {
 	return (
     <Box
       cursor={"pointer"}
@@ -20,16 +23,16 @@ export const GifCard = ({ src, alt, title }: GifCardProps) => {
     >
       <Box bgGradient="linear(to-t, #0E5183, #8DDEFC)" borderRadius={"3xl"}>
         <Image
-          src={`/thumbnail/shoulder/${src}.png`}
+          src={`/thumbnail/${folder}/${src}.png`}
           alt={alt}
-          width={"10rem"}
-          height={"13rem"}
+          width={width || "10rem"}
+          height={height || "13rem"}
 					margin={"auto"}
           onMouseOver={(e) => {
-						e.currentTarget.src = `/gif/shoulder/${src}.gif`;
+						e.currentTarget.src = `/gif/${folder}/${src}.gif`;
           }}
           onMouseOut={(e) => {
-            e.currentTarget.src = `/thumbnail/shoulder/${src}.png`;
+            e.currentTarget.src = `/thumbnail/${folder}/${src}.png`;
           }}
         />
       </Box>

@@ -20,15 +20,16 @@ export default function Shoulder() {
         <Speaker />
 
         <Container maxW="8xl">
-          <Text fontSize={{ 
-							base: "3xl", 
-							md: "4xl", 
-							lg: "6xl" 
-						}}
-						fontWeight={"900"}
-						textAlign="center"
-						pt={5}
-					>
+          <Text
+            fontSize={{
+              base: "3xl",
+              md: "4xl",
+              lg: "6xl",
+            }}
+            fontWeight={"900"}
+            textAlign="center"
+            pt={10}
+          >
             GERAK AKTIF SHOULDER
           </Text>
 
@@ -41,37 +42,72 @@ export default function Shoulder() {
             gap={6}
             mt={5}
           >
-            <GifCard alt="flexion" src="flexion" title="Flexion" />
-            <GifCard alt="extension" src="extension" title="Extension" />
             <GifCard
+              folder="shoulder"
+              alt="flexion"
+              src="flexion"
+              title="Flexion"
+            />
+            <GifCard
+              folder="shoulder"
+              alt="extension"
+              src="extension"
+              title="Extension"
+            />
+            <GifCard
+              folder="shoulder"
               alt="hyperextension"
               src="hyperextension"
               title="Hyperextension"
             />
-            <GifCard alt="abduction" src="abduction" title="Abduction" />
-            <GifCard alt="adduction" src="adduction" title="Adduction" />
-            <GifCard alt="circumduction" src="circumduction" title="Circumduction" />
             <GifCard
+              folder="shoulder"
+              alt="abduction"
+              src="abduction"
+              title="Abduction"
+            />
+            <GifCard
+              folder="shoulder"
+              alt="adduction"
+              src="adduction"
+              title="Adduction"
+            />
+            <GifCard
+              folder="shoulder"
+              alt="circumduction"
+              src="circumduction"
+              title="Circumduction"
+            />
+            <GifCard
+              folder="shoulder"
               alt="lateral_rotation"
               src="lateral_rotation"
               title="Lateral Rotation"
             />
             <GifCard
+              folder="shoulder"
               alt="medial_rotation"
               src="medial_rotation"
               title="Medial Rotation"
             />
             <GifCard
+              folder="shoulder"
               alt="horizontal_abduction"
               src="horizontal_abduction"
               title="Horizontal Abduction"
             />
             <GifCard
+              folder="shoulder"
               alt="horizontal_adduction"
               src="horizontal_adduction"
               title="Horizontal Adduction"
             />
-            <GifCard alt="scaption" src="scaption" title="Scaption" />
+            <GifCard
+              folder="shoulder"
+              alt="scaption"
+              src="scaption"
+              title="Scaption"
+            />
           </Grid>
         </Container>
       </Box>
