@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jelajah Sendi",
-  description: "",
+  description: "Website edukasi berbasis gamifikasi tentang struktur anatomi sendi",
 };
 
 export default function RootLayout({
