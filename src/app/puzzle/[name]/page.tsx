@@ -1,16 +1,34 @@
 "use client";
 
-import { Box, Container, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { ButtonBack } from "@/components/ButtonBack";
 import Speaker from "@/components/Speaker";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 export default function Puzzle() {
+  const [isSolved, setIsSolved] = useState(false);
+
+  const MySwal = withReactContent(Swal);
 	const query = usePathname();
 	const title = query.split("/")[2];
+
+  const handleSolved = () => {
+    MySwal.fire({
+      title: "Selamat!",
+      text: "Puzzle berhasil diselesaikan",
+      icon: "success",
+      confirmButtonText: "Okay",
+      timer: 3000,
+    });
+
+    setIsSolved(true);
+  }
 
   return (
     <>
@@ -45,7 +63,7 @@ export default function Puzzle() {
             imageSrc={`/puzzles/${title}.png`}
             rows={3}
             columns={3}
-            onSolved={() => alert("Congratulations!")}
+            onSolved={() => handleSolved()}
           />
 
           <Box
@@ -65,20 +83,38 @@ export default function Puzzle() {
           </Box>
         </Flex>
 
-        {/* Bottom right corner button */}
-        <Link href={`/gif/${title}`}>
+        {isSolved ? (
+          <Link href={`/gif/${title}`}>
+            <Box
+              pos={"absolute"}
+              bottom={"1rem"}
+              right={"1rem"}
+              p={4}
+              zIndex={1}
+            >
+              <Image
+                src={"/images/next.png"}
+                alt="home"
+                w={"70"}
+                h={"70"}
+                cursor={"pointer"}
+                _hover={{ transform: "scale(1.1)" }}
+                transition={"transform 0.3s"}
+              />
+            </Box>
+          </Link>
+        ) : (
           <Box pos={"absolute"} bottom={"1rem"} right={"1rem"} p={4} zIndex={1}>
             <Image
               src={"/images/next.png"}
               alt="home"
               w={"70"}
               h={"70"}
+              opacity={0.5}
               cursor={"pointer"}
-              _hover={{ transform: "scale(1.1)" }}
-              transition={"transform 0.3s"}
             />
           </Box>
-        </Link>
+        )}
       </Box>
     </>
   );
