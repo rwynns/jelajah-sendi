@@ -42,7 +42,7 @@ export default function Elbow() {
           >
             <GifCard
               alt="flexion"
-              folder="elbow"
+              folder="elbows"
               src="flexion"
               title="Flexion"
               width="13rem"
@@ -50,14 +50,14 @@ export default function Elbow() {
             />
             <GifCard
               alt="extension"
-              folder="elbow"
+              folder="elbows"
               src="extension"
               title="Extension"
               width="13rem"
               height="16rem"
             />
             <GifCard
-              folder="elbow"
+              folder="elbows"
               alt="pronation"
               src="pronation"
               title="Pronation"
@@ -65,7 +65,7 @@ export default function Elbow() {
               height="16rem"
             />
             <GifCard
-              folder="elbow"
+              folder="elbows"
               alt="supination"
               src="supination"
               title="Supination"
