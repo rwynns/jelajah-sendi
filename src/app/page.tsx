@@ -21,15 +21,15 @@ export default function Home() {
           <Image
             src={"/images/tulang_kaki.png"}
             alt="tulang_kaki"
-            w={"250"}
-            h={"250"}
+            w={"200"}
+            h={"200"}
           />
           <Flex justifyContent={"space-between"}>
             <Box>
               <Text fontSize="4xl" fontWeight={"500"} color={"gray.800"}>
                 Selamat Datang
               </Text>
-              <Image src={"/images/judul.png"} alt="logo" w={"190"} h={"90"} />
+              <Image src={"/images/judul.png"} alt="logo" w={"140"} h={"70"} />
             </Box>
           </Flex>
         </Container>
@@ -37,8 +37,8 @@ export default function Home() {
         <Image
           src={"/images/tulang_bahu.png"}
           alt="tulang_bahu"
-          w={"350"}
-          h={"400"}
+          w={"300"}
+          h={"350"}
           pos={"absolute"}
           top={"200"}
           right={"100"}
