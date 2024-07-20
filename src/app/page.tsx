@@ -1,8 +1,20 @@
+"use client";
+
 import Header from "@/components/Header";
 import { Box, Container, Image, Text, Flex } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRef } from "react";
+import { useMute } from "@/context/MuteProvider";
 
 export default function Home() {
+  const { isMute } = useMute();
+
+  const audioRef = useRef(new Audio('/audio/click.wav'))
+
+  const playAudio = () => {
+    !isMute && audioRef.current.play();
+  }
+
   return (
     <>
       <Box
@@ -55,7 +67,7 @@ export default function Home() {
           flexDirection={"column"}
           alignItems={"center"}
         >
-          <Link href={"/page2"}>
+          <Link href={"/page2"} onClick={playAudio}>
             <Image
               src={"/images/start.png"}
               alt="start"

@@ -7,18 +7,32 @@ import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { useMute } from "@/context/MuteProvider";
 
 export default function Puzzle() {
   const [isSolved, setIsSolved] = useState(false);
 
+  const { isMute } = useMute();
   const MySwal = withReactContent(Swal);
 	const query = usePathname();
 	const title = query.split("/")[2];
 
+  const audioRef = useRef(new Audio("/audio/click.wav"));
+  const successRef = useRef(new Audio("/audio/success.mp3"));
+
+  const playAudio = () => {
+    !isMute && audioRef.current.play();
+  };
+
+  const playSuccess = () => {
+    !isMute && successRef.current.play();
+  }
+
   const handleSolved = () => {
+    playSuccess();
     MySwal.fire({
       title: "Selamat!",
       text: "Puzzle berhasil diselesaikan",
@@ -84,7 +98,7 @@ export default function Puzzle() {
         </Flex>
 
         {isSolved ? (
-          <Link href={`/gif/${title}`}>
+          <Link href={`/gif/${title}`} onClick={playAudio}>
             <Box
               pos={"absolute"}
               bottom={"1rem"}
