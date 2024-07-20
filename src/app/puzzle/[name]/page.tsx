@@ -7,28 +7,32 @@ import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { useMute } from "@/context/MuteProvider";
 
 export default function Puzzle() {
   const [isSolved, setIsSolved] = useState(false);
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [success, setSuccess] = useState<HTMLAudioElement | null>(null);
 
   const { isMute } = useMute();
   const MySwal = withReactContent(Swal);
 	const query = usePathname();
 	const title = query.split("/")[2];
 
-  const audioRef = useRef(new Audio("/audio/click.wav"));
-  const successRef = useRef(new Audio("/audio/success.mp3"));
+  useEffect(() => {
+    setAudio(new Audio("/audio/click.wav"));
+    setSuccess(new Audio("/audio/success.mp3"));
+  }, []);
 
   const playAudio = () => {
-    !isMute && audioRef.current.play();
+    !isMute && audio?.play();
   };
 
   const playSuccess = () => {
-    !isMute && successRef.current.play();
+    !isMute && success?.play();
   }
 
   const handleSolved = () => {

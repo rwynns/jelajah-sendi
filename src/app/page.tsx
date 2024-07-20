@@ -3,16 +3,19 @@
 import Header from "@/components/Header";
 import { Box, Container, Image, Text, Flex } from "@chakra-ui/react";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMute } from "@/context/MuteProvider";
 
 export default function Home() {
   const { isMute } = useMute();
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
-  const audioRef = useRef(new Audio('/audio/click.wav'))
+  useEffect(() => {
+    setAudio(new Audio("/audio/click.wav"));
+  }, []);
 
   const playAudio = () => {
-    !isMute && audioRef.current.play();
+    !isMute && audio?.play();
   }
 
   return (
